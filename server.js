@@ -8,6 +8,8 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 //localhost or home 127.0.0.1
 const db = knex({
     client: 'pg',
