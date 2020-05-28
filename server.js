@@ -26,7 +26,7 @@ const db = knex({
 const app = express();
 // similar to body parser, converts JSON to express language
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('its working!!');
