@@ -12,14 +12,10 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        connectionString: process.env.DATABASE_URL,
-        ssl: true
+        connectionString: 'postgresql-amorphous-29185',
+        ssl: true,
     }
 });
-
-// db.select('*').from('users').then(data => {
-//     console.log(data);
-// });
 
 const app = express();
 // similar to body parser, converts JSON to express language
